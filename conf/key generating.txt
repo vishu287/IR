@@ -1,0 +1,45 @@
+
+D:\Projects\Android\IR\conf>keytool -exportcert -list -v \
+Illegal option:  \
+keytool -list [OPTION]...
+
+Lists entries in a keystore
+
+Options:
+
+ -rfc                            output in RFC style
+ -alias <alias>                  alias name of the entry to process
+ -keystore <keystore>            keystore name
+ -storepass <arg>                keystore password
+ -storetype <storetype>          keystore type
+ -providername <providername>    provider name
+ -providerclass <providerclass>  provider class name
+ -providerarg <arg>              provider argument
+ -providerpath <pathlist>        provider classpath
+ -v                              verbose output
+ -protected                      password through protected mechanism
+
+Use "keytool -help" for all available commands
+
+D:\Projects\Android\IR\conf>-alias androiddebugkey -keystore %USERPROFILE%\.android\debug.keystore
+'-alias' is not recognized as an internal or external command,
+operable program or batch file.
+
+D:\Projects\Android\IR\conf>keytool -list -v -keystore "%USERPROFILE%\.android\debug.keystore" -alias androiddebugkey -storepass android -keypass android
+Alias name: androiddebugkey
+Creation date: Dec 26, 2017
+Entry type: PrivateKeyEntry
+Certificate chain length: 1
+Certificate[1]:
+Owner: C=US, O=Android, CN=Android Debug
+Issuer: C=US, O=Android, CN=Android Debug
+Serial number: 1
+Valid from: Tue Dec 26 17:43:58 IST 2017 until: Thu Dec 19 17:43:58 IST 2047
+Certificate fingerprints:
+         MD5:  AB:DE:83:F1:6A:A0:CB:B8:AC:96:92:29:61:1A:54:90
+         SHA1: AD:1C:B7:58:87:2B:AF:80:E7:38:E5:D4:D7:B7:66:EB:DD:A0:5F:0C
+         SHA256: BD:1B:D1:DE:44:57:B0:B5:34:EE:13:CA:81:C2:12:8C:AC:85:B9:AF:94:CC:FD:9B:82:5E:7C:F3:A3:3E:27:86
+         Signature algorithm name: SHA1withRSA
+         Version: 1
+
+D:\Projects\Android\IR\conf>^A

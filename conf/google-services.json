@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "437966123677",
+    "project_id": "firebase-iresult"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:437966123677:android:cc319df89b36e34a",
+        "android_client_info": {
+          "package_name": "app.marks.com.ir"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "437966123677-uiur05qc2teflkqfc6u2p4ucv60kp6of.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "app.marks.com.ir",
+            "certificate_hash": "ad1cb758872baf80e738e5d4d7b766ebdda05f0c"
+          }
+        },
+        {
+          "client_id": "437966123677-icnminuh651t1g1pemr2r13qg7kg2lcn.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBEKpO6cQlTGrR7eMmd3eOjwPN-cTDa1JI"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 1
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
