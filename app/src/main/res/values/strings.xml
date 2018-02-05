@@ -13,4 +13,33 @@
     <string name="permission_rationale">"Contacts permissions are needed for providing email
         completions."
     </string>
+    <string name="title_activity_show_marks">ShowMarksActivity</string>
+    <string name="landing_login">Login</string>
+    <string name="landing_signUp">Sign up</string>
+    <string name="title_activity_login">login</string>
+
+    <string name="signup_nameLbl">Name</string>
+    <string name="signup_emailLbl">Email</string>
+    <string name="signup_mobileLbl">Mobile</string>
+    <string name="signup_classDivPrompt">Class/Division</string>
+    <string name="signup_subjectPrompt">Subject</string>
+    <string name="signup_registerBtn">Register</string>
+
+
+    <string-array name="subject_arrays">
+        <item>Physics</item>
+        <item>Chemistry</item>
+        <item>History</item>
+        <item>Kannada</item>
+        <item>Accounts</item>
+        <item>Social Studies</item>
+        <item>Finance</item>
+    </string-array>
+
+    <string-array name="classDiv_arrays">
+        <item>Science</item>
+        <item>Arts</item>
+        <item>Commerece</item>
+    </string-array>
+
 </resources>

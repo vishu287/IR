@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="app.marks.com.ir.view.SignupActivity">
+
+    <LinearLayout
+        android:id="@+id/linearLayout2"
+        android:layout_width="344dp"
+        android:layout_height="394dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.495">
+
+        <EditText
+            android:id="@+id/nameTxt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:ems="10"
+            android:hint="@string/signup_nameLbl"
+            android:inputType="textPersonName" android:maxLength="100"/>
+
+        <EditText
+            android:id="@+id/emailTxt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:ems="10"
+            android:hint="@string/signup_emailLbl"
+            android:inputType="textEmailAddress" android:maxLength="100"/>
+
+        <EditText
+            android:id="@+id/phoneTxt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:ems="10"
+            android:hint="@string/signup_mobileLbl"
+            android:inputType="phone" android:maxLength="10"/>
+
+        <Spinner
+            android:id="@+id/subjectSpnr"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:entries="@array/subject_arrays"
+            android:prompt="@string/signup_subjectPrompt"
+            />
+
+        <Spinner
+            android:id="@+id/classDivSpnr"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:entries="@array/classDiv_arrays"
+            android:prompt="@string/signup_classDivPrompt"
+            />
+
+        <Button
+            android:id="@+id/RegisterBtn"
+            android:layout_width="180dp"
+            android:layout_height="60dp"
+            android:layout_marginStart="150dp"
+            android:layout_marginTop="10dp"
+            android:onClick="register"
+            android:text="@string/signup_registerBtn"
+            android:textAlignment="center" />
+    </LinearLayout>
+</android.support.constraint.ConstraintLayout>
