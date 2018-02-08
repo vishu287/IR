@@ -1,12 +1,10 @@
-package app.marks.com.ir.view;
+package app.marks.com.ir.view.impl;
 
 import android.content.Intent;
-import android.content.IntentFilter;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
-import android.widget.Button;
 
 import app.marks.com.ir.R;
 

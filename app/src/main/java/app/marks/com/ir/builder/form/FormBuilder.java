@@ -1,9 +1,6 @@
 package app.marks.com.ir.builder.form;
 
-import android.support.v7.app.AppCompatActivity;
-
 import app.marks.com.ir.builder.Builder;
-import app.marks.com.ir.form.SignupForm;
 
 /**
  * Created by vishwanathm on 2/2/2018.

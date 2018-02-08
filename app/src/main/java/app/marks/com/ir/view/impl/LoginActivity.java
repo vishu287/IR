@@ -1,4 +1,4 @@
-package app.marks.com.ir.view;
+package app.marks.com.ir.view.impl;
 
 import android.animation.Animator;
 import android.animation.AnimatorListenerAdapter;

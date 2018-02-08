@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="app.marks.com.ir.view.SignupActivity">
+    tools:context="app.marks.com.ir.view.impl.SignupActivity">
 
     <LinearLayout
         android:id="@+id/linearLayout2"

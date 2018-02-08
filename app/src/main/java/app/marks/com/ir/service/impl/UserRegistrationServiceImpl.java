@@ -3,9 +3,8 @@ package app.marks.com.ir.service.impl;
 import java.util.ArrayList;
 import java.util.List;
 
-import app.marks.com.ir.builder.form.SignupFormBuilder;
 import app.marks.com.ir.common.exception.AppException;
-import app.marks.com.ir.form.SignupForm;
+import app.marks.com.ir.form.SignUpForm;
 import app.marks.com.ir.service.UserRegistrationService;
 
 /**
@@ -17,9 +16,9 @@ public class UserRegistrationServiceImpl implements UserRegistrationService {
 
 
     @Override
-    public void register(final SignupForm signupForm) {
+    public void register(final SignUpForm signUpForm) {
 
-        if (isUserValid(signupForm.getPhone(), signupForm.getEmail())) {
+        if (isUserValid(signUpForm.getPhone(), signUpForm.getEmail())) {
             //store in DB by calling the rest api
         } else {
             throw new AppException("You are not allowed for registration.");
