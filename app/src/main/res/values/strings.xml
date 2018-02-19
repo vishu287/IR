@@ -14,8 +14,8 @@
         completions."
     </string>
     <string name="title_activity_show_marks">ShowMarksActivity</string>
-    <string name="landing_login">Login</string>
-    <string name="landing_signUp">Sign up</string>
+    <string name="home_signOut">Sign out</string>
+    <string name="home_signUp">Sign up</string>
     <string name="title_activity_login">login</string>
 
     <string name="signup_nameLbl">Name</string>

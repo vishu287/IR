@@ -1,61 +1,47 @@
 package app.marks.com.ir.view.impl;
 
-import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
+import android.app.Activity;
 import android.text.TextUtils;
-import android.util.Log;
 import android.view.View;
-import android.widget.Toast;
 
-import com.googlecode.androidannotations.annotations.Bean;
+import org.androidannotations.annotations.Click;
+import org.androidannotations.annotations.EActivity;
+
+import javax.inject.Inject;
 
 import app.marks.com.ir.R;
 import app.marks.com.ir.builder.form.SignUpFormBuilder;
 import app.marks.com.ir.form.SignUpForm;
 import app.marks.com.ir.presenter.SignUpPresentor;
-import app.marks.com.ir.presenter.impl.SignUpPresentorImpl;
-import app.marks.com.ir.service.UserRegistrationService;
-import app.marks.com.ir.service.impl.UserRegistrationServiceImpl;
 import app.marks.com.ir.view.SignUpView;
 
-public class SignupActivity extends AppCompatActivity implements SignUpView {
+
+@EActivity(R.layout.activity_signup)
+public class SignupActivity extends Activity implements SignUpView {
+
+    @Inject
+    SignUpPresentor signUpPresentor;
+
+    @Inject
+    SignUpFormBuilder signUpFormBuilder;
 
     /**
-     *
-     */
-    @Bean(SignUpPresentorImpl.class)
-    private SignUpPresentor signUpPresentor;
-
-    /**
-     *
-     */
-    @Bean(SignUpFormBuilder.class)
-    private SignUpFormBuilder signUpFormBuilder;
-
-    /**
-     * @param savedInstanceState
-     */
-    @Override
-    protected void onCreate(final Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_signup);
-    }
-
-    /**
-     *
      * @param v
      */
+    @Click(R.id.RegisterBtn)
     public void register(final View v) {
-        final SignUpForm form = signUpFormBuilder.convertFrom(this);
-        signUpPresentor.register(form);
+        //final SignUpForm form = signUpFormBuilder.convertFrom(this);
+        //signUpPresentor.register(form);
+        //EditText text = (EditText) findViewById(R.id.nameTxt);
+        //System.out.println("===========================>"+text.getText());
     }
 
     @Override
     public boolean isValid(final SignUpForm form) {
         boolean valid = Boolean.FALSE;
-        if(TextUtils.isEmpty(form.getName().getText().toString())){
+        if (TextUtils.isEmpty(form.getName().getText().toString())) {
 
-        }else if (TextUtils.isEmpty(form.getEmail().getText().toString())){
+        } else if (TextUtils.isEmpty(form.getEmail().getText().toString())) {
 
         }
         return valid;

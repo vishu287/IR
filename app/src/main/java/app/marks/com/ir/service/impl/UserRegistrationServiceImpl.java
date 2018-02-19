@@ -18,7 +18,7 @@ public class UserRegistrationServiceImpl implements UserRegistrationService {
     @Override
     public void register(final SignUpForm signUpForm) {
 
-        if (isUserValid(signUpForm.getPhone(), signUpForm.getEmail())) {
+        if (isUserValid(signUpForm.getPhone().getText().toString(), signUpForm.getEmail().getText().toString())) {
             //store in DB by calling the rest api
         } else {
             throw new AppException("You are not allowed for registration.");
