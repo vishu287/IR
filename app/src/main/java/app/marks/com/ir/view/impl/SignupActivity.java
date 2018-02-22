@@ -7,22 +7,18 @@ import android.view.View;
 import org.androidannotations.annotations.Click;
 import org.androidannotations.annotations.EActivity;
 
-import javax.inject.Inject;
-
 import app.marks.com.ir.R;
 import app.marks.com.ir.builder.form.SignUpFormBuilder;
 import app.marks.com.ir.form.SignUpForm;
-import app.marks.com.ir.presenter.SignUpPresentor;
+import app.marks.com.ir.viewModel.SignUpViewModel;
 import app.marks.com.ir.view.SignUpView;
 
 
 @EActivity(R.layout.activity_signup)
 public class SignupActivity extends Activity implements SignUpView {
 
-    @Inject
-    SignUpPresentor signUpPresentor;
+    SignUpViewModel signUpPresentor;
 
-    @Inject
     SignUpFormBuilder signUpFormBuilder;
 
     /**

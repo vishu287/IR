@@ -14,7 +14,7 @@
         completions."
     </string>
     <string name="title_activity_show_marks">ShowMarksActivity</string>
-    <string name="home_signOut">Sign out</string>
+    <string name="signOut">Sign out</string>
     <string name="home_signUp">Sign up</string>
     <string name="title_activity_login">login</string>
 
@@ -41,5 +41,7 @@
         <item>Arts</item>
         <item>Commerece</item>
     </string-array>
+    <string name="title_activity_student_details">studentDetailsActivity</string>
+    <string name="action_settings">Settings</string>
 
 </resources>

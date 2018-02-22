@@ -20,9 +20,13 @@ android {
     dataBinding {
         enabled = true
     }
+    compileOptions {
+        targetCompatibility 1.8
+        sourceCompatibility 1.8
+    }
 }
 
-def AAVersion = "4.4.0"
+
 
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
@@ -32,10 +36,15 @@ dependencies {
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'com.android.support.test:runner:1.0.1'
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.1'
-    annotationProcessor "org.androidannotations:androidannotations:$AAVersion"
-    implementation "org.androidannotations:androidannotations-api:$AAVersion"
+    annotationProcessor "org.androidannotations:androidannotations:$rootProject.AAVersion"
+    implementation "org.androidannotations:androidannotations-api:$rootProject.AAVersion"
     implementation 'com.google.android.gms:play-services-auth:11.8.0'
-    compile group: 'javax.inject', name: 'javax.inject', version: '1'
-    //compile group: 'org.androidannotations', name: 'androidannotations-api', version: '4.4.0'
-    //compile group: 'com.googlecode.androidannotations', name: 'androidannotations-api', version: '2.7.1'
+    implementation "android.arch.lifecycle:common-java8:1.1.0"
+    implementation "android.arch.lifecycle:livedata:1.1.0"
+
+    // dependency injection
+//    implementation "com.google.dagger:dagger:$rootProject.dagger2Version"
+//    annotationProcessor "com.google.dagger:dagger-compiler:$rootProject.dagger2Version"
+//    annotationProcessor "com.google.dagger:dagger-android-processor:$rootProject.dagger2Version"
+//    implementation "com.google.dagger:dagger-android-support:$rootProject.dagger2Version"
 }

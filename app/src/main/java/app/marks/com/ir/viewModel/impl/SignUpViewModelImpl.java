@@ -1,22 +1,19 @@
-package app.marks.com.ir.presenter.impl;
+package app.marks.com.ir.viewModel.impl;
 
 import android.util.Log;
 
-import javax.inject.Inject;
-
 import app.marks.com.ir.common.exception.AppException;
 import app.marks.com.ir.form.SignUpForm;
-import app.marks.com.ir.presenter.SignUpPresentor;
 import app.marks.com.ir.service.UserRegistrationService;
+import app.marks.com.ir.viewModel.SignUpViewModel;
 
 /**
  * Created by vishwanathm on 2/7/2018.
  */
 
-public class SignUpPresentorImpl implements SignUpPresentor {
+public class SignUpViewModelImpl implements SignUpViewModel {
 
-    @Inject
-    private UserRegistrationService userRegistrationService;
+     UserRegistrationService userRegistrationService;
 
     public void register(final SignUpForm form){
         try {
