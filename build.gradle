@@ -30,6 +30,10 @@ task clean(type: Delete) {
     delete rootProject.buildDir
 }
 
+aaptOptions{
+    cruncherEnabled = false
+}
+
 ext {
 //    dagger2Version = '2.14.1'
     AAVersion = "4.4.0"
