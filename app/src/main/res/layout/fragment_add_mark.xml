@@ -1,0 +1,112 @@
+<GridLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/addMark"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:visibility="visible"
+    tools:context="app.marks.com.ir.view.impl.AddMarkFragment">
+
+        <TextView
+            android:id="@+id/rollNo"
+            android:layout_column="0"
+            android:layout_row="0"
+            android:paddingTop="40dp"
+            android:paddingLeft="40dp"
+            android:paddingBottom="40dp"
+            android:text="@string/addMark_rollNo" />
+
+        <TextView
+            android:id="@+id/rollNoVal"
+            android:layout_column="1"
+            android:layout_row="0"
+            android:paddingTop="40dp"
+            android:paddingLeft="40dp"
+            android:paddingBottom="40dp"
+            android:text="@string/addMark_rollNoVal" />
+
+        <TextView
+            android:id="@+id/stdName"
+            android:layout_column="0"
+            android:layout_row="1"
+            android:paddingLeft="40dp"
+            android:paddingBottom="40dp"
+            android:text="@string/addMark_studentName" />
+
+        <TextView
+            android:id="@+id/stdNameVal"
+            android:layout_column="1"
+            android:layout_row="1"
+            android:paddingLeft="40dp"
+            android:paddingBottom="40dp"
+            android:text="@string/addMark_studentNameVal" />
+
+        <TextView
+            android:id="@+id/dept"
+            android:layout_column="0"
+            android:layout_row="2"
+            android:paddingLeft="40dp"
+            android:paddingBottom="40dp"
+            android:text="@string/addMark_Dept" />
+
+        <TextView
+            android:id="@+id/depVal"
+            android:layout_column="1"
+            android:layout_row="2"
+            android:paddingLeft="40dp"
+            android:paddingBottom="40dp"
+            android:text="@string/addMark_DeptVal" />
+
+        <TextView
+            android:id="@+id/academicYr"
+            android:layout_column="0"
+            android:layout_row="3"
+            android:paddingLeft="40dp"
+            android:paddingBottom="40dp"
+            android:text="@string/addMark_AcademicYr" />
+
+        <TextView
+            android:id="@+id/academicYrVal"
+            android:layout_column="1"
+            android:layout_row="3"
+            android:paddingLeft="40dp"
+            android:paddingBottom="40dp"
+            android:text="@string/addMark_AcademicYrVal" />
+
+        <TextView
+            android:id="@+id/mark"
+            android:layout_column="0"
+            android:layout_row="4"
+            android:paddingLeft="40dp"
+            android:paddingBottom="40dp"
+            android:text="@string/addMark_Mark" />
+
+        <EditText
+            android:layout_column="1"
+            android:layout_row="4"
+            android:paddingLeft="40dp"
+            android:paddingBottom="40dp"
+            android:id="@+id/markVal"
+            android:inputType="number"
+            android:text="@string/addMark_MarkVal" />
+
+        <Button
+            android:id="@+id/previousBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_column="0"
+            android:layout_row="5"
+            android:layout_marginLeft="40dp"
+            android:text="@string/addMark_previousBtn" />
+
+        <Button
+            android:id="@+id/nextBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_column="1"
+            android:layout_row="5"
+            android:layout_marginLeft="40dp"
+            android:text="@string/addMark_nextBtn"
+            android:onClick="onButtonPressed"/>
+
+
+</GridLayout>

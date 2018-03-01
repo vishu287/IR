@@ -9,6 +9,16 @@ public class Subject {
 
     private String id;
 
+    public Department getDepartment() {
+        return department;
+    }
+
+    public void setDepartment(Department department) {
+        this.department = department;
+    }
+
+    private Department department;
+
     public String getId() {
         return id;
     }
@@ -22,7 +32,7 @@ public class Subject {
     }
 
     public Subject(String id, String name) {
-        this.id= id;
+        this.id = id;
         this.name = name;
     }
 

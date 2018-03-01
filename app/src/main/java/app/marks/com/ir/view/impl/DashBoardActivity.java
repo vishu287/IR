@@ -8,7 +8,6 @@ import android.widget.Button;
 import android.widget.LinearLayout;
 
 import org.androidannotations.annotations.Bean;
-import org.androidannotations.annotations.Click;
 import org.androidannotations.annotations.EActivity;
 import org.androidannotations.annotations.ViewById;
 
@@ -17,9 +16,7 @@ import java.util.List;
 import app.marks.com.ir.R;
 import app.marks.com.ir.dto.Subject;
 import app.marks.com.ir.viewModel.DashBoardViewModel;
-import app.marks.com.ir.viewModel.HomeViewModel;
 import app.marks.com.ir.viewModel.impl.DashBoardViewModelImpl;
-import app.marks.com.ir.viewModel.impl.HomeViewModelImpl;
 
 @EActivity(R.layout.activity_dash_board)
 public class DashBoardActivity extends Activity {
@@ -30,12 +27,12 @@ public class DashBoardActivity extends Activity {
     @Bean(DashBoardViewModelImpl.class)
     DashBoardViewModel dashBoardViewModel;
 
-    HomeViewModel homeViewModel =null;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        homeViewModel = new HomeViewModelImpl(this);
+
     }
 
     @Override
@@ -55,13 +52,6 @@ public class DashBoardActivity extends Activity {
         }
     }
 
-    @Click(R.id.dashBoard_signOut)
-    public void goHome(View view) {
-        Intent nextIntent = new Intent(this, HomeActivity_.class);
-        System.out.println("--------------------Go to home---------------------------------> ");
-        startActivity(nextIntent);
-    }
-
     private View.OnClickListener mThisButtonListener = new View.OnClickListener() {
         public void onClick(View v) {
             System.out.println("--------------------onClick--------------------------------->" + v.getId());
@@ -70,9 +60,8 @@ public class DashBoardActivity extends Activity {
     };
 
     private void showNextActivity() {
-        Intent nextIntent = new Intent(this, StudentDetailsActivity_.class);
         System.out.println("--------------------Go to home---------------------------------> ");
-        startActivity(nextIntent);
+        startActivity(new Intent(this, AddMarkActivity.class));
     }
 
     @Override

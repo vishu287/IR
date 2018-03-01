@@ -26,7 +26,8 @@
         <activity
             android:name=".view.impl.StudentDetailsActivity_"
             android:label="@string/title_activity_student_details"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".view.impl.AddMarkActivity"></activity>
     </application>
 
 </manifest>

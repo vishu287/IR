@@ -14,7 +14,8 @@ import org.androidannotations.annotations.EActivity;
 import java.util.List;
 
 import app.marks.com.ir.R;
-import app.marks.com.ir.dto.Student;
+import app.marks.com.ir.dto.Person;
+import app.marks.com.ir.dto.User;
 import app.marks.com.ir.viewModel.StudentDetailsViewModel;
 import app.marks.com.ir.viewModel.impl.StudentDetailsViewModelImpl;
 
@@ -28,19 +29,19 @@ public class StudentDetailsActivity extends Activity {
     protected void onStart() {
         super.onStart();
 
-        final List<Student> students = studentDetailsViewModel.getStudentsByDepartment("", "");
+        final List<User> students = studentDetailsViewModel.getStudentsByDepartment("", "");
 
         final ListView listView = (ListView) findViewById(R.id.listView);
         final TextView textView = (TextView) findViewById(R.id.textView);
 
-        final ArrayAdapter<List<Student>> adapter = new ArrayAdapter(this,
+        final ArrayAdapter<List<Person>> adapter = new ArrayAdapter(this,
                 android.R.layout.simple_list_item_1, android.R.id.text1, students);
         listView.setAdapter(adapter);
 
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int position, long l) {
-                final Student std = (Student) adapter.getItem(position);
+                final Person std = (Person) adapter.getItem(position);
                 Toast.makeText(getApplicationContext(), std.getFullName(), Toast.LENGTH_SHORT).show();
             }
         });

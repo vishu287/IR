@@ -25,6 +25,20 @@
     <string name="signup_subjectPrompt">Subject</string>
     <string name="signup_registerBtn">Register</string>
 
+    <string name="addMark_rollNo">Roll No</string>
+    <string name="addMark_studentName">Student Name</string>
+    <string name="addMark_Dept">Department</string>
+    <string name="addMark_AcademicYr">Academic Year</string>
+    <string name="addMark_Mark">Mark</string>
+
+    <string name="addMark_rollNoVal">1122</string>
+    <string name="addMark_studentNameVal">Vishwanath Mathapati</string>
+    <string name="addMark_DeptVal">Physics</string>
+    <string name="addMark_AcademicYrVal">2017-2018</string>
+    <string name="addMark_MarkVal">85</string>
+
+    <string name="addMark_previousBtn">&lt;</string>
+    <string name="addMark_nextBtn">&gt;</string>
 
     <string-array name="subject_arrays">
         <item>Physics</item>
@@ -43,5 +57,10 @@
     </string-array>
     <string name="title_activity_student_details">studentDetailsActivity</string>
     <string name="action_settings">Settings</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title_activity_add_mark">AddMarkActivity</string>
+    <string name="title_activity_main">MainActivity</string>
 
 </resources>
