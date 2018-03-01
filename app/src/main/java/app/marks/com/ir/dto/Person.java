@@ -4,15 +4,15 @@ package app.marks.com.ir.dto;
  * Created by vishwanathm on 2/20/2018.
  */
 
-public class Student {
-
+public class Person {
     private String id;
+
+
     private String rollNumber;
     private String firstName;
     private String lastName;
     private String fullName;
-    private Subject subject;
-    private Department department;
+    private String email;
 
     public String getId() {
         return id;
@@ -47,26 +47,18 @@ public class Student {
     }
 
     public String getFullName() {
-        return this.firstName + " "  + this.lastName;
+        return this.firstName + " " + this.lastName;
     }
 
     public void setFullName(String fullName) {
         this.fullName = fullName;
     }
 
-    public Subject getSubject() {
-        return subject;
+    public String getEmail() {
+        return email;
     }
 
-    public void setSubject(Subject subject) {
-        this.subject = subject;
-    }
-
-    public Department getDepartment() {
-        return department;
-    }
-
-    public void setDepartment(Department department) {
-        this.department = department;
+    public void setEmail(String email) {
+        this.email = email;
     }
 }
