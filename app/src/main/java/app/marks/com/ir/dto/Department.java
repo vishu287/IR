@@ -4,7 +4,9 @@ package app.marks.com.ir.dto;
  * Created by vishwanathm on 2/20/2018.
  */
 
-public class Department {
+public class Department extends BaseDto {
+
+    public static final Long serialVersionUID = 211312313123131133L;
     private String id;
 
     private String name;

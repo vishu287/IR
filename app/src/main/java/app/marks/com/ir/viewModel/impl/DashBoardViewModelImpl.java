@@ -22,6 +22,4 @@ public class DashBoardViewModelImpl implements DashBoardViewModel {
 
         return subjects;
     }
-
-
 }

@@ -4,7 +4,10 @@ package app.marks.com.ir.dto;
  * Created by vishwanathm on 2/22/2018.
  */
 
-public class Mark {
+public class Mark extends BaseDto {
+
+    public static final Long serialVersionUID = 211312313123131134L;
+
     public String getId() {
         return id;
     }

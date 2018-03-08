@@ -4,14 +4,11 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="app.marks.com.ir.view.impl.AddMarkActivity">
+    tools:context="app.marks.com.ir.view.impl.StudentListActivity_">
 
-    <fragment
-        android:id="@+id/fragment2"
-        android:name="app.marks.com.ir.view.impl.AddMarkFragment"
-        android:layout_width="0px"
-        android:layout_height="match_parent"
-        android:layout_weight="1"
+    <ListView
+        android:id="@+id/listView"
+        android:layout_width="match_parent"
+        android:layout_height="fill_parent"
         />
-
 </android.support.constraint.ConstraintLayout>

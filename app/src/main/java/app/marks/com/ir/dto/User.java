@@ -4,7 +4,10 @@ package app.marks.com.ir.dto;
  * Created by vishwanathm on 2/22/2018.
  */
 
-public class User {
+public class User extends BaseDto {
+
+    public static final Long serialVersionUID = 211312313123131131L;
+
     private String id;
     private Person person;
     private UserType type;

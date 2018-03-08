@@ -1,0 +1,50 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/addMark1"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="app.marks.com.ir.view.impl.ShowStudentFragment">
+
+    <TextView
+        android:id="@+id/rollNoVal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingBottom="40dp"
+        android:paddingLeft="40dp"
+        android:paddingTop="40dp"
+        android:text="@string/addMark_rollNoVal" />
+
+    <TextView
+        android:id="@+id/stdNameVal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingBottom="40dp"
+        android:paddingLeft="40dp"
+        android:text="@string/addMark_studentNameVal" />
+
+    <TextView
+        android:id="@+id/depVal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingBottom="40dp"
+        android:paddingLeft="40dp"
+        android:text="@string/addMark_DeptVal" />
+
+    <TextView
+        android:id="@+id/academicYrVal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingBottom="40dp"
+        android:paddingLeft="40dp"
+        android:text="@string/addMark_AcademicYrVal" />
+
+    <EditText
+        android:id="@+id/markVal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:paddingBottom="40dp"
+        android:paddingLeft="40dp"
+        android:text="@string/addMark_MarkVal" />
+</LinearLayout>

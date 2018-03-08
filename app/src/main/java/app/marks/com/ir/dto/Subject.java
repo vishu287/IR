@@ -4,7 +4,9 @@ package app.marks.com.ir.dto;
  * Created by vishwanathm on 2/19/2018.
  */
 
-public class Subject {
+public class Subject  extends BaseDto{
+
+    public static final Long serialVersionUID = 211312313123131136L;
     private String name;
 
     private String id;

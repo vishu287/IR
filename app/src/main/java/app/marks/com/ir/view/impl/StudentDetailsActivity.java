@@ -1,49 +1,54 @@
 package app.marks.com.ir.view.impl;
 
-import android.app.Activity;
-import android.view.View;
-import android.widget.AdapterView;
-import android.widget.ArrayAdapter;
-import android.widget.ListView;
-import android.widget.TextView;
-import android.widget.Toast;
-
-import org.androidannotations.annotations.Bean;
-import org.androidannotations.annotations.EActivity;
-
-import java.util.List;
+import android.os.Bundle;
+import android.support.v4.app.FragmentActivity;
 
 import app.marks.com.ir.R;
-import app.marks.com.ir.dto.Person;
-import app.marks.com.ir.dto.User;
-import app.marks.com.ir.viewModel.StudentDetailsViewModel;
-import app.marks.com.ir.viewModel.impl.StudentDetailsViewModelImpl;
+import app.marks.com.ir.dto.Student;
+import app.marks.com.ir.view.AddMarkView;
+import app.marks.com.ir.viewModel.StudentListViewModel;
+import app.marks.com.ir.viewModel.impl.AddMarksViewModelImpl;
+import app.marks.com.ir.viewModel.impl.StudentListViewModelImpl;
 
-@EActivity(R.layout.activity_student_details)
-public class StudentDetailsActivity extends Activity {
+public class StudentDetailsActivity extends FragmentActivity implements AddMarkView {
 
-    @Bean(StudentDetailsViewModelImpl.class)
-    StudentDetailsViewModel studentDetailsViewModel;
+    private AddMarksViewModelImpl addMarksViewModel = new AddMarksViewModelImpl();
+
+    private StudentListViewModel studentListViewModel = new StudentListViewModelImpl();
 
     @Override
-    protected void onStart() {
-        super.onStart();
+    public void onCreate(final Bundle bundle) {
+        super.onCreate(bundle);
+        setContentView(R.layout.activity_student_details);
+        final Student student = (Student) getIntent().getSerializableExtra("student");
+        final int position = getIntent().getIntExtra("position", 0);
+        if (student != null) {
+            final MarksButtonFragment buttonsFragment = (MarksButtonFragment) getFragmentManager().findFragmentById(R.id.marksButtonFragment);
+            buttonsFragment.updateStudentIndex(position);
+            updateFields(position, student);
+        }
+    }
 
-        final List<User> students = studentDetailsViewModel.getStudentsByDepartment("", "");
+    @Override
+    public void showStudent(final int studentId) {
+        final Student student = (Student) studentListViewModel.getStudentByDepartment("", "", studentId);
+        updateFields(studentId, student);
+    }
 
-        final ListView listView = (ListView) findViewById(R.id.listView);
-        final TextView textView = (TextView) findViewById(R.id.textView);
+    @Override
+    public void updateStudent(final int studentId, final String marks) {
+        final Student student = (Student) studentListViewModel.getStudentByDepartment("", "", studentId);
+        student.setMarks(marks);
+        addMarksViewModel.updateStudent(student);
+    }
 
-        final ArrayAdapter<List<Person>> adapter = new ArrayAdapter(this,
-                android.R.layout.simple_list_item_1, android.R.id.text1, students);
-        listView.setAdapter(adapter);
+    @Override
+    public void saveAllStudents() {
+        addMarksViewModel.updateAllStudents();
+    }
 
-        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-            @Override
-            public void onItemClick(AdapterView<?> adapterView, View view, int position, long l) {
-                final Person std = (Person) adapter.getItem(position);
-                Toast.makeText(getApplicationContext(), std.getFullName(), Toast.LENGTH_SHORT).show();
-            }
-        });
+    private void updateFields(final int position, final Student student) {
+        final ShowStudentFragment stdFragment = (ShowStudentFragment) getFragmentManager().findFragmentById(R.id.showStudentFragment);
+        stdFragment.displayStudentDetails(student);
     }
 }

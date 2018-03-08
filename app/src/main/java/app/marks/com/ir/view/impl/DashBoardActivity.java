@@ -61,7 +61,7 @@ public class DashBoardActivity extends Activity {
 
     private void showNextActivity() {
         System.out.println("--------------------Go to home---------------------------------> ");
-        startActivity(new Intent(this, AddMarkActivity.class));
+        startActivity(new Intent(this, StudentListActivity_.class));
     }
 
     @Override

@@ -7,24 +7,26 @@ import java.util.List;
 
 import app.marks.com.ir.dto.Department;
 import app.marks.com.ir.dto.Person;
+import app.marks.com.ir.dto.Student;
 import app.marks.com.ir.dto.Subject;
 import app.marks.com.ir.dto.User;
 import app.marks.com.ir.dto.UserType;
-import app.marks.com.ir.viewModel.StudentDetailsViewModel;
+import app.marks.com.ir.viewModel.StudentListViewModel;
 
 /**
  * Created by vishwanathm on 2/20/2018.
  */
 @EBean
-public class StudentDetailsViewModelImpl implements StudentDetailsViewModel {
+public class StudentListViewModelImpl implements StudentListViewModel {
 
-    public List<User> getStudentsByDepartment(final String departmentId, final String userId) {
-        final List<User> students = new ArrayList<>();
+    @Override
+    public List<Student> getStudentsByDepartment(final String departmentId, final String userId) {
+        final List<Student> students = new ArrayList<>();
         Person student = null;
-        User user = null;
+        Student user = null;
 
         for (int i = 1; i < 20; i++) {
-            user = new User();
+            user = new Student();
             student = new Person();
             student.setId("personId: " + i);
             user.setId("userId: " + i);
@@ -35,8 +37,16 @@ public class StudentDetailsViewModelImpl implements StudentDetailsViewModel {
             user.setDepartment(new Department("1e1e1e1", "Science"));
             user.setPerson(student);
             user.setType(UserType.STUDENT);
+            user.setMarks(""+i);
+            user.setAcademicYear("2017-2018");
             students.add(user);
         }
         return students;
+    }
+
+    @Override
+    public User getStudentByDepartment(final String departmentId, final String userId, final int i) {
+        final List<Student> students = getStudentsByDepartment(departmentId,userId);
+        return students.get(i);
     }
 }

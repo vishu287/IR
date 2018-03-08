@@ -4,7 +4,9 @@ package app.marks.com.ir.dto;
  * Created by vishwanathm on 2/22/2018.
  */
 
-public class Academic {
+public class Academic extends BaseDto {
+
+    public static final Long serialVersionUID = 211312313123131132L;
     private String id;
     private Integer startYear;
     private Integer endYear;

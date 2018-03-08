@@ -17,17 +17,13 @@
         <activity android:name=".view.impl.HomeActivity_">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
         <activity android:name=".view.impl.SignupActivity_" />
         <activity android:name=".view.impl.DashBoardActivity_" />
-        <activity
-            android:name=".view.impl.StudentDetailsActivity_"
-            android:label="@string/title_activity_student_details"
-            android:theme="@style/AppTheme.NoActionBar" />
-        <activity android:name=".view.impl.AddMarkActivity"></activity>
+        <activity android:name=".view.impl.StudentListActivity_" />
+        <activity android:name=".view.impl.StudentDetailsActivity" />
     </application>
 
 </manifest>

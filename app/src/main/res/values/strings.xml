@@ -37,8 +37,9 @@
     <string name="addMark_AcademicYrVal">2017-2018</string>
     <string name="addMark_MarkVal">85</string>
 
-    <string name="addMark_previousBtn">&lt;</string>
-    <string name="addMark_nextBtn">&gt;</string>
+    <string name="addMark_previousBtn">Previous &lt;</string>
+    <string name="addMark_nextBtn">Next &gt;</string>
+    <string name="addMark_saveAllBtn">Save All</string>
 
     <string-array name="subject_arrays">
         <item>Physics</item>
