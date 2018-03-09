@@ -19,7 +19,7 @@ public class HomeActivity extends Activity {
 
     private static final String TAG = HomeActivity.class.getSimpleName();
 
-    HomeViewModel homeViewModel =null;
+    private HomeViewModel homeViewModel;
 
     @ViewById(R.id.login_progress)
     View mProgressView;

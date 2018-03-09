@@ -1,5 +1,7 @@
 package app.marks.com.ir.viewModel;
 
+import java.util.List;
+
 import app.marks.com.ir.dto.Student;
 
 /**
@@ -8,7 +10,5 @@ import app.marks.com.ir.dto.Student;
 
 public interface AddMarksViewModel {
 
-    void updateStudent(Student student);
-
-    void updateAllStudents();
+    void updateAllStudents(List<Student> updatedStudents);
 }

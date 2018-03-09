@@ -54,13 +54,11 @@ public class DashBoardActivity extends Activity {
 
     private View.OnClickListener mThisButtonListener = new View.OnClickListener() {
         public void onClick(View v) {
-            System.out.println("--------------------onClick--------------------------------->" + v.getId());
             showNextActivity();
         }
     };
 
     private void showNextActivity() {
-        System.out.println("--------------------Go to home---------------------------------> ");
         startActivity(new Intent(this, StudentListActivity_.class));
     }
 
@@ -71,8 +69,6 @@ public class DashBoardActivity extends Activity {
         for (Subject subject : subjects) {
             final Button buttonView = findViewById(subject.getId().hashCode());
             layout.removeView(buttonView);
-            System.out.println("--------------------findViewById--------------------------------->");
         }
-        System.out.println("--------------------onResume--------------------------------->");
     }
 }

@@ -37,7 +37,7 @@ public class StudentListViewModelImpl implements StudentListViewModel {
             user.setDepartment(new Department("1e1e1e1", "Science"));
             user.setPerson(student);
             user.setType(UserType.STUDENT);
-            user.setMarks(""+i);
+//            user.setMarks("" + i);
             user.setAcademicYear("2017-2018");
             students.add(user);
         }
@@ -46,7 +46,7 @@ public class StudentListViewModelImpl implements StudentListViewModel {
 
     @Override
     public User getStudentByDepartment(final String departmentId, final String userId, final int i) {
-        final List<Student> students = getStudentsByDepartment(departmentId,userId);
-        return students.get(i);
+        final List<Student> students = getStudentsByDepartment(departmentId, userId);
+        return students.get((i < students.size()) ? i : students.size());
     }
 }

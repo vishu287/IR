@@ -8,7 +8,7 @@ public interface AddMarkView {
 
     void showStudent(int studentId);
 
-    void updateStudent(int studentId, String marks);
+    void updateStudentMarks(int studentId, String marks);
 
     void saveAllStudents();
 }
